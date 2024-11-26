@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PVY2P67JM"></script>
     <script>
@@ -10,33 +11,273 @@
     
         gtag('config', 'G-7PVY2P67JM');
     </script>
-    
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiba Shawish</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hiba Shawish - Missing You</title>
+    <meta name="title" content="Hiba Shawish">
+    <meta name="description" content="Hiba! I Miss You!">
+    <meta name="keywords" content="Hiba Shawish, Hiba, Shawish, Hiba Shawish Jordan">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <style>
-        h1, p, a {
+        :root {
+            --bg-dark: #0F2027;
+            --bg-gradient-1: #203A43;
+            --bg-gradient-2: #2C5364;
+            --text-soft-white: #e0e0e0;
+            --text-accent: #89CFF0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark), var(--bg-gradient-1), var(--bg-gradient-2));
+            color: var(--text-soft-white);
+            overflow: hidden;
+            overscroll-behavior: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             text-align: center;
-            margin-top: 200px;
-            font-family: 'Merriweather', serif;
+            padding: 20px;
+            width: 100%;
         }
-        em, a {
-            color: #ff0000;
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            font-weight: 300;
+            color: var(--text-accent);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            max-width: 100%;
+            word-wrap: break-word;
         }
-        p, a {
-            text-decoration: none;
+
+        .time-description {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            color: var(--text-soft-white);
+            margin-bottom: 15px;
+            opacity: 0.8;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .time-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .time-unit {
+            background: rgba(32, 58, 67, 0.5);
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 70px;
+            width: calc(14.28% - 10px);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .time-value {
+            font-size: clamp(1.5rem, 6vw, 2.5rem);
+            font-weight: 100;
+            color: var(--text-accent);
+            margin-bottom: 5px;
+        }
+
+        .time-label {
+            font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+
+        .message {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            font-weight: 300;
+            color: var(--text-soft-white);
+            max-width: 90%;
+            margin-top: 20px;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .heart {
+            color: #FF6B6B;
+            animation: pulse 2s infinite;
+            display: inline-block;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        /* Improved Mobile Responsiveness */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .time-container {
+                gap: 5px;
+            }
+
+            .time-unit {
+                min-width: 50px;
+                padding: 6px;
+                margin: 3px;
+            }
+
+            .time-value {
+                font-size: clamp(1.2rem, 5vw, 2rem);
+            }
+
+            .time-label {
+                font-size: clamp(0.5rem, 2vw, 0.7rem);
+            }
+        }
+
+        /* Ultra-Small Devices */
+        @media (max-width: 320px) {
+            .time-unit {
+                min-width: 40px;
+                padding: 4px;
+                margin: 2px;
+            }
+
+            .time-value {
+                font-size: clamp(1rem, 4vw, 1.5rem);
+            }
+        }
+
+        /* Landscape Mode Adjustments */
+        @media screen and (max-height: 450px) and (orientation: landscape) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .title, .time-description, .message {
+                width: 100%;
+            }
+
+            .time-container {
+                width: auto;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>I love you Hiba <em>❤</em></h1>
-    
-    
-    <p><a href="https://forms.gle/5uq8Fzx3Gqgsfagn9">Message ~</p>
+    <div class="container">
+        <h1 class="title">Hello Hiba! <span class="heart">♥</span></h1>
+        
+        <div id="timeDescription" class="time-description"><p>It's been</p></div>
+        
+        <div class="time-container" id="timeContainer">
+            <!-- Time units will be dynamically inserted here -->
+        </div>
+
+        <div class="message">
+            <p>You are not talking to me.</p> 
+            <br>
+            <p><span class="heart">♥</span> I miss you. <span class="heart">♥</span></p>
+        </div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const startDate = new Date('2024-10-28T20:26:00Z');
+            const now = new Date();
+            const difference = now - startDate;
+
+            const timeUnits = [
+                { 
+                    name: 'Year', 
+                    pluralName: 'Years', 
+                    value: Math.floor(difference / (1000 * 60 * 60 * 24 * 365)) 
+                },
+                { 
+                    name: 'Month', 
+                    pluralName: 'Months', 
+                    value: Math.floor((difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)) 
+                },
+                { 
+                    name: 'Day', 
+                    pluralName: 'Days', 
+                    value: Math.floor((difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)) 
+                },
+                { 
+                    name: 'Hour', 
+                    pluralName: 'Hours', 
+                    value: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) 
+                },
+                { 
+                    name: 'Minute', 
+                    pluralName: 'Minutes', 
+                    value: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)) 
+                },
+                { 
+                    name: 'Second', 
+                    pluralName: 'Seconds', 
+                    value: Math.floor((difference % (1000 * 60)) / 1000) 
+                }
+            ];
+
+            // Filter out zero values, but keep seconds
+            const visibleUnits = timeUnits.filter(unit => 
+                unit.value > 0 || unit.name === 'Second'
+            );
+
+            const timeContainer = document.getElementById('timeContainer');
+
+            // Render time units
+            timeContainer.innerHTML = visibleUnits
+                .map(unit => `
+                    <div class="time-unit">
+                        <div class="time-value">${unit.value.toString().padStart(2, '0')}</div>
+                        <div class="time-label">${unit.value === 1 ? unit.name : unit.pluralName}</div>
+                    </div>
+                `).join('');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 </body>
 </html>
